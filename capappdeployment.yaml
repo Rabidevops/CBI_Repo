@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
       - name: flask
-        image: raveendra137/captain:v1
+        image: raveendra137/captain:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
 
