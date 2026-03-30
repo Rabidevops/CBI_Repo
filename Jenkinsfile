@@ -3,14 +3,14 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = "raveendra137/captain"
-        TAG = "v2"
+        TAG = "${BUILD_NUMBER}"
     }
 
     stages {
 
         stage('Clone Code') {
             steps {
-                git 'https://github.com/Rabidevops/CBI_Repo.git'
+                 git branch: 'main', url: 'https://github.com/Rabidevops/CBI_Repo.git'
             }
         }
 
